@@ -29,7 +29,7 @@ instance_name_prefix = "rke2-test"
 # AWS EC2 instance type
 instance_type = "t3.medium"
 
-# Existing AWS SSH key_name
+# Existing AWS SSH key-pair name - https://docs.aws.amazon.com/console/ec2/key-pairs
 key_name = ""
 
 # AWS EC2 instance volume size (in GB)
