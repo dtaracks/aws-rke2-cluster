@@ -30,7 +30,7 @@ sudo mkdir -p /etc/rancher/rke2 | sudo tee -a $${LOGFILE}
 instance_target_host=$(cat /opt/server_ip)
 
 sudo cat << EOF >/etc/rancher/rke2/config.yaml
-token: 0da8c856ded54b075553cf93bf6af75ec92491732425058fead463b970656d3a
+token: SET_MY_TOKEN_HERE
 server: https://$instance_target_host:9345
 EOF
 
