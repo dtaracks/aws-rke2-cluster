@@ -6,9 +6,6 @@ Terraform to bootstrap an RKE2 cluster in AWS
 1. Create a `terraform.tfvars`
 
 ```
-# AWS AMI to use for the node OS - Default: suse-sles-15-sp4-v20221216-hvm-ssd-x86_64
-ami = "ami-0c544bda9765444c2"
-
 # aws-cli Profile to use
 aws_profile = ""
 
@@ -69,6 +66,5 @@ user_data/run_on_client.sh
 
 ## Known Issues
 
-[Provider produced inconsistent final plan / an invalid new value for .tags_all](https://github.com/hashicorp/terraform-provider-aws/issues/19583)
-
-To work around this just re-run `terraform plan` and `terraform apply`
+* [Provider produced inconsistent final plan / an invalid new value for .tags_all](https://github.com/hashicorp/terraform-provider-aws/issues/19583)
+* Currently only SUSE AMI is supported due to the bootstrap scripts

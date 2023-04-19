@@ -1,6 +1,7 @@
 variable "ami" {
-  description = "AMI of image for the EC2 instances"
+  description = "AMI of image for the EC2 instances, currently only SUSE is supported"
   type = string
+  default = "ami-0c544bda9765444c2"
 }
 
 variable "aws_profile" {
@@ -52,7 +53,7 @@ variable "region" {
 variable "rke2_version" {
   description = "RKE2 Version"
   type        = string
-  default     = "v1.24.11+rke2r1"
+  default     = "v1.26.4-rc1+rke2r1"
 
 }
 

@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Currently only SUSE is supported by the bootstrap scripts
+
 LOGFILE="/root/user_data.log"
 
 instance_target_host=$(cat /opt/server_ip)
