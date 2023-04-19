@@ -22,15 +22,6 @@ resource "aws_instance" "masters" {
   vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
   key_name = "${var.key_name}"
 
-  #tags = {
-  #  Owner = "drew.thomson"
-  #  Approver = "robert.mendieta"
-  #  Purpose = "install.testing"
-  #  Description = "install.testing"
-  #  expirationDate = "2023-04-01"
-  #  Terraform = "true"
-  #}
-
   root_block_device {
     volume_size = var.volume_size
     volume_type = var.volume_type
@@ -49,15 +40,6 @@ resource "aws_instance" "workers" {
   subnet_id = module.vpc.public_subnets[0]
   vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
   key_name = "${var.key_name}"
-
-  #tags = {
-  #  Owner = "drew.thomson"
-  #  Approver = "robert.mendieta"
-  #  Purpose = "install.testing"
-  #  Description = "install.testing"
-  #  expirationDate = "2023-04-01"
-  #  Terraform = "true"
-  #}
 
   root_block_device {
     volume_size = var.volume_size
