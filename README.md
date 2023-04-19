@@ -59,9 +59,9 @@ user_data/run_on_client.sh
 
 ## Installation
 
-1. terraform init
-2. terraform plan tfplan.out
-3. terraform apply tfplan.out
+1. `terraform init`
+2. `terraform plan -out tfplan.out`
+3. `terraform apply tfplan.out`
 4. *see known issues regarding tags* Repeat Step 2 and 3.
 5. Wait for the user_data scripts to run and then the host(s) will reboot
 
