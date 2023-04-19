@@ -6,7 +6,7 @@ Terraform to bootstrap an RKE2 cluster in AWS
 1. Create a `terraform.tfvars`
 
 ```
-# AWS AMI to use for the node OS
+# AWS AMI to use for the node OS - Default: suse-sles-15-sp4-v20221216-hvm-ssd-x86_64
 ami = "ami-0c544bda9765444c2"
 
 # aws-cli Profile to use
