@@ -1,0 +1,6 @@
+tfplan.out
+terraform.tfvars
+.terraform
+.terraform*
+terraform.tfstate*
+.DS*
