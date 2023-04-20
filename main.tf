@@ -46,7 +46,7 @@ resource "aws_instance" "workers" {
   key_name = "${var.key_name}"
 
   tags = {
-    Name = "wrker-${var.instance_name_prefix}-${random_string.suffix.result}"
+    Name = "worker-${var.instance_name_prefix}-${random_string.suffix.result}"
   }
 
   root_block_device {
