@@ -23,7 +23,7 @@ resource "aws_instance" "masters" {
   key_name = "${var.key_name}"
 
   tags = {
-    Name = "master-${var.instance_name_prefix}-${random_string.suffix.result}"
+    Name = "${each.key}-${var.instance_name_prefix}-${random_string.suffix.result}"
   }
 
   root_block_device {
@@ -46,7 +46,7 @@ resource "aws_instance" "workers" {
   key_name = "${var.key_name}"
 
   tags = {
-    Name = "worker-${var.instance_name_prefix}-${random_string.suffix.result}"
+    Name = "${each.key}-${var.instance_name_prefix}-${random_string.suffix.result}"
   }
 
   root_block_device {
